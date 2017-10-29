@@ -148,11 +148,11 @@ public class SpotBugsExtension extends CodeQualityExtension {
      * @return filename of a filter specifying which bugs are reported
      */
     public File getIncludeFilter() {
-        TextResource includeFilterConfig = getIncludeFilterConfig();
-        if (includeFilterConfig == null) {
+        TextResource config = getIncludeFilterConfig();
+        if (config == null) {
             return null;
         }
-        return includeFilterConfig.asFile();
+        return config.asFile();
     }
 
     /**
@@ -192,11 +192,11 @@ public class SpotBugsExtension extends CodeQualityExtension {
      * @return filename of a filter specifying bugs to exclude from being reported
      */
     public File getExcludeFilter() {
-        TextResource excludeFilterConfig = getExcludeFilterConfig();
-        if (excludeFilterConfig == null) {
+        TextResource config = getExcludeFilterConfig();
+        if (config == null) {
             return null;
         }
-        return excludeFilterConfig.asFile();
+        return config.asFile();
     }
 
     /**
@@ -236,11 +236,11 @@ public class SpotBugsExtension extends CodeQualityExtension {
      * @return filename of a filter specifying baseline bugs to exclude from being reporte
      */
     public File getExcludeBugsFilter() {
-        TextResource excludeBugsFilterConfig = getExcludeBugsFilterConfig();
-        if (excludeBugsFilterConfig == null) {
+        TextResource config = getExcludeBugsFilterConfig();
+        if (config == null) {
             return null;
         }
-        return excludeBugsFilterConfig.asFile();
+        return config.asFile();
     }
 
     /**
